@@ -1,0 +1,478 @@
+/* ===========================
+   INVITATION SCENE
+=========================== */
+
+.invitation-scene{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle,
+        #3b126d,
+        #090014
+    );
+
+    color:white;
+
+}
+
+
+
+/* ===========================
+   MAGIC ENVELOPE
+=========================== */
+
+
+.magic-envelope{
+
+    position:relative;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    z-index:5;
+
+}
+
+
+
+.envelope{
+
+    width:180px;
+    height:130px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:90px;
+
+    animation:
+    envelopeFloat 3s ease-in-out infinite;
+
+
+    filter:
+    drop-shadow(
+        0 0 30px #d58cff
+    );
+
+}
+
+
+
+.envelope-glow{
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    left:50%;
+    top:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(220,150,255,.8),
+        transparent 70%
+    );
+
+
+    filter:blur(20px);
+
+    animation:
+    glowPulse 2s infinite;
+
+}
+
+
+
+.magic-envelope h2{
+
+    margin-top:40px;
+
+    font-size:32px;
+
+    letter-spacing:3px;
+
+    color:#ffe8ff;
+
+    text-shadow:
+    0 0 20px violet;
+
+}
+
+
+
+/* ===========================
+   CHURCH INVITATION
+=========================== */
+
+
+.church-invitation{
+
+    width:500px;
+
+    padding:50px;
+
+    text-align:center;
+
+
+    border-radius:30px;
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.15),
+        rgba(120,40,200,.25)
+    );
+
+
+    backdrop-filter:blur(15px);
+
+
+    border:
+
+    2px solid rgba(255,255,255,.3);
+
+
+    box-shadow:
+
+    0 0 40px purple,
+    0 0 100px rgba(180,80,255,.5);
+
+
+}
+
+
+
+.church-invitation h1{
+
+    font-size:40px;
+
+    color:#ffe9ff;
+
+    text-shadow:
+    0 0 20px violet;
+
+}
+
+
+
+.church-invitation h2{
+
+    color:#ffd86f;
+
+}
+
+
+
+.church-invitation p{
+
+    font-size:22px;
+
+    line-height:1.7;
+
+}
+
+
+
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+
+.invite-buttons{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+}
+
+
+
+.invite-buttons button{
+
+    padding:15px 45px;
+
+    border-radius:50px;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+
+
+.accept-btn{
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #9b45ff,
+        #d68cff
+    );
+
+    color:white;
+
+    box-shadow:
+    0 0 30px purple;
+
+}
+
+
+
+.decline-btn{
+
+    background:#333;
+
+    color:white;
+
+}
+
+
+
+/* ===========================
+   ACCEPT MAGIC
+=========================== */
+
+
+.lylia-arrival{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+}
+
+
+
+.magic-explosion{
+
+    position:absolute;
+
+
+    width:300px;
+    height:300px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        white,
+        violet,
+        transparent 70%
+    );
+
+
+    animation:
+
+    explosion 2s infinite;
+
+
+}
+
+
+
+.accept-lylia{
+
+    height:65vh;
+
+    z-index:5;
+
+
+    filter:
+
+    drop-shadow(
+        0 0 50px #d68cff
+    );
+
+
+}
+
+
+
+.lylia-arrival h1{
+
+    z-index:10;
+
+    font-size:55px;
+
+    margin-top:20px;
+
+    color:white;
+
+    text-shadow:
+
+    0 0 30px violet;
+
+}
+
+
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+
+@keyframes envelopeFloat{
+
+
+0%,100%{
+
+transform:
+translateY(0);
+
+}
+
+
+50%{
+
+transform:
+translateY(-25px);
+
+}
+
+
+}
+
+
+
+@keyframes glowPulse{
+
+
+0%,100%{
+
+opacity:.5;
+
+transform:
+translate(-50%,-50%)
+scale(.8);
+
+}
+
+
+50%{
+
+opacity:1;
+
+transform:
+translate(-50%,-50%)
+scale(1.2);
+
+}
+
+}
+
+
+
+@keyframes explosion{
+
+
+0%{
+
+transform:scale(.5);
+
+opacity:.5;
+
+}
+
+
+50%{
+
+transform:scale(1.5);
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:scale(2);
+
+opacity:0;
+
+}
+
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+
+.church-invitation{
+
+    width:90%;
+
+    padding:30px;
+
+}
+
+
+.church-invitation h1{
+
+    font-size:30px;
+
+}
+
+
+.church-invitation p{
+
+    font-size:18px;
+
+}
+
+
+.accept-lylia{
+
+    height:55vh;
+
+}
+
+
+
+}

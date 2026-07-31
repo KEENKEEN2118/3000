@@ -1,0 +1,433 @@
+.lylia-scene{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle,
+        #6128a0,
+        #14051f,
+        #000
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+
+.lylia-portal{
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        white,
+        #c77cff,
+        transparent 70%
+    );
+
+
+    filter:blur(30px);
+
+
+    animation:
+
+    portalPulse 3s infinite;
+
+}
+
+
+
+
+.lylia-image{
+
+
+    position:absolute;
+
+
+    height:55vh;
+
+
+    max-width:70%;
+
+
+    object-fit:contain;
+
+
+    z-index:5;
+
+
+    filter:
+
+    drop-shadow(
+        0 0 40px #c77cff
+    );
+
+
+    animation:
+
+    lyliaZoom 5s ease-in-out infinite;
+
+}
+
+
+
+
+@keyframes lyliaZoom{
+
+
+    0%{
+
+        transform:scale(.95);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+
+    100%{
+
+        transform:scale(.95);
+
+    }
+
+}
+
+
+
+
+
+.lylia-text{
+
+
+    position:absolute;
+
+
+    bottom:55px;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+    z-index:10;
+
+}
+
+
+
+
+.lylia-text h1{
+
+
+    font-size:4rem;
+
+
+    letter-spacing:8px;
+
+
+    margin:10px;
+
+
+    color:#ffeaff;
+
+
+    text-shadow:
+
+    0 0 20px #c77cff;
+
+}
+
+
+
+
+.lylia-text p{
+
+
+    font-size:1.2rem;
+
+}
+
+
+
+
+.celebrate-text{
+
+
+    color:#ffd8ff;
+
+
+    animation:
+
+    textGlow 3s infinite;
+
+}
+
+
+
+
+
+.lylia-icon{
+
+
+    font-size:40px;
+
+
+    color:#ffd86f;
+
+
+}
+
+
+
+
+.lylia-text button{
+
+
+    margin-top:25px;
+
+
+    padding:
+
+    15px 40px;
+
+
+    border:none;
+
+
+    border-radius:50px;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #8c32ff,
+
+        #dc8cff
+
+    );
+
+
+    color:white;
+
+
+    font-weight:bold;
+
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+    0 0 25px #b45cff;
+
+}
+
+
+
+
+.lylia-particles span{
+
+
+    position:absolute;
+
+
+    width:6px;
+
+
+    height:6px;
+
+
+    background:white;
+
+
+    border-radius:50%;
+
+
+    box-shadow:
+
+    0 0 15px #d78cff;
+
+
+    animation:
+
+    floatParticle 6s infinite;
+
+}
+
+
+
+
+.star{
+
+
+    position:absolute;
+
+
+    color:white;
+
+
+    animation:
+
+    starGlow 2s infinite;
+
+}
+
+
+
+.s1{
+
+    top:20%;
+
+    left:20%;
+
+}
+
+
+.s2{
+
+    top:30%;
+
+    right:20%;
+
+}
+
+
+.s3{
+
+    bottom:20%;
+
+    left:50%;
+
+}
+
+
+
+
+
+@keyframes portalPulse{
+
+
+    0%,100%{
+
+        transform:scale(.9);
+
+        opacity:.5;
+
+    }
+
+
+    50%{
+
+        transform:scale(1.2);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+
+
+@keyframes floatParticle{
+
+
+    from{
+
+        transform:translateY(300px);
+
+        opacity:0;
+
+    }
+
+
+    50%{
+
+        opacity:1;
+
+    }
+
+
+    to{
+
+        transform:translateY(-400px);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+
+
+@keyframes starGlow{
+
+
+    50%{
+
+        transform:scale(1.5);
+
+        opacity:.5;
+
+    }
+
+}
+
+
+
+
+
+@keyframes textGlow{
+
+
+    0%,100%{
+
+        opacity:.7;
+
+    }
+
+
+    50%{
+
+        opacity:1;
+
+        text-shadow:
+
+        0 0 20px #d28cff;
+
+    }
+
+}
