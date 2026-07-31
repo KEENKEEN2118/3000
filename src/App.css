@@ -236,9 +236,6 @@ body,
 }
 
 
-
-
-
 .birthday-text h2{
 
     font-size:60px;
@@ -252,22 +249,15 @@ body,
 
     font-size:17px;
 
-    line-height:1.5;
+    line-height:1.2;
 
 }
-
-
-
-
-
 .birthday-text p{
 
 
-    font-size:20px;
+    font-size:17px;
 
-
-    line-height:1.6;
-
+    line-height:1.2;
 
     color:#f5e8ff;
 
@@ -552,5 +542,7 @@ opacity:0;
 
     line-height:1.5;
 
+
+}
 
 }
