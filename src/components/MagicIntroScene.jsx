@@ -5,13 +5,12 @@ import {
   FaMagic,
   FaMeteor,
 } from "react-icons/fa";
-import magicSound from "../assets/magic-opening.mp3";
 import "../styles/MagicIntroScene.css";
 
 export default function MagicIntroScene({ onBegin }) {
   const canvasRef = useRef(null);
   const sceneRef = useRef(null);
-  const audioRef = useRef(new Audio(magicSound));
+  const audioRef = useRef(new Audio("/audio/magic-opening.mp3"));
 
   const [portalOpen, setPortalOpen] = useState(false);
 
